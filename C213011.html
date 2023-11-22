@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Choice Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="background-color:rgb(71, 255, 86);">...</h1>
+    
+
+    <h1>Multiple Choice Questions</h1>
+    <h1 style="background-color:rgb(89, 71, 255);">...</h1>
+
+
+    <form id="mcqForm">
+        <!-- Question 1 -->
+        <fieldset>
+            <legend>WHAT IS YOUR COUNTRY NAME?</legend>
+            <label>
+                <input type="radio" name="q1" value="a"> BANGLADESH
+            </label>
+            <label>
+                <input type="radio" name="q1" value="b"> DUBAI
+            </label>
+            <label>
+                <input type="radio" name="q1" value="c"> FRANCE
+            </label>
+        </fieldset>
+
+        
+        <!-- Question 2 -->
+        <fieldset>
+            <legend>Class of women famous for music and dance skills who were often attached to
+                temples and royal courts</legend>
+            <label>
+                <input type="radio" name="q20" value="a"> Aphinaya 
+            </label>
+            <label>
+                <input type="radio" name="q20" value="b"> rupa
+            </label>
+            <label>
+                <input type="radio" name="q20" value="c"> devadasi 
+            </label>
+        </fieldset>
+
+        
+        <!-- Question 3 -->
+        <fieldset>
+            <legend>WHAT IS YOUR Mothers NAME?</legend>
+            <label>
+                <input type="radio" name="q1" value="a"> AMENA
+            </label>
+            <label>
+                <input type="radio" name="q1" value="b"> ABIDA
+            </label>
+            <label>
+                <input type="radio" name="q1" value="c"> ROKSANA
+            </label>
+        </fieldset>
+
+        <!-- Question 3 -->
+        <fieldset>
+            <legend>WHAT IS YOUR Fathers NAME?</legend>
+            <label>
+                <input type="radio" name="q1" value="a"> Alif
+            </label>
+            <label>
+                <input type="radio" name="q1" value="b"> Amin
+            </label>
+            <label>
+                <input type="radio" name="q1" value="c"> Harun
+            </label>
+        </fieldset>
+
+        <!-- Question 3 -->
+        <fieldset>
+            <legend>WHAT IS YOUR School NAME?</legend>
+            <label>
+                <input type="radio" name="q1" value="a"> PK
+            </label>
+            <label>
+                <input type="radio" name="q1" value="b"> GK
+            </label>
+            <label>
+                <input type="radio" name="q1" value="c"> RK
+            </label>
+        </fieldset>
+
+        <!-- Question 3 -->
+        <fieldset>
+            <legend>WHAT IS YOUR GRAND MOTHER NAME?</legend>
+            <label>
+                <input type="radio" name="q1" value="a"> AMENA
+            </label>
+            <label>
+                <input type="radio" name="q1" value="b"> ABIDA
+            </label>
+            <label>
+                <input type="radio" name="q1" value="c"> ROKSANA
+            </label>
+        </fieldset>
+
+
+    
+
+
+        <button type="button" onclick="showResults()">Submit</button>
+    </form>
+
+    <script>
+        function showResults() {
+            let results = '';
+            for (let i = 1; i <= 20; i++) {
+                const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selectedOption) {
+                    results += `Question ${i}: ${selectedOption.value}\n`;
+                } else {
+                    alert(`Please answer Question ${i}.`);
+                    return;
+                }
+            }
+            alert("Selected Choices:\n\n" + results);
+        }
+    </script>
+
+</body>
+</html>
+
+
+
